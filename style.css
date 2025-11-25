@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root{
+    --base-color: oklch(0.9088 0.0404 86.53);
+    --text-color: oklch(0.2374 0.0404 91.87);
+    --primary-color: oklch(0.3297 0.0933 139.41);
+    --secondary-color: oklch(0.8694 0.0432 91.87);
+    --extra-color: oklch(0.2497 0.0822 11.75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-family: "Playfair Display", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color)
+}
+
+body{
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display";
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+    font-weight: bold;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: "Playfair Display";
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--secondary-color);
+}
