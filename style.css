@@ -5,14 +5,15 @@
     --text-color: oklch(0.2374 0.0404 91.87);
     --primary-color: oklch(0.3297 0.0933 139.41);
     --secondary-color: oklch(0.8694 0.0432 91.87);
-    --extra-color: oklch(0.2497 0.0822 11.75);
+    --extra-color: oklch(0.549 0.0586 91.87);
+    --border-radius-px: 25px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    
 }
 
 html {
@@ -21,7 +22,7 @@ html {
 }
 
 body{
-    padding: 1em;
+    padding:  var(--border-radius-px);
     background-color: var(--base-color);
 }
 
@@ -30,16 +31,18 @@ h1, h2, h3 {
 }
 
 nav {
-    margin: 1em auto 3em auto;
-    width: min(1000px, 100%);
+    
+    width: min(100%, 100%);
+    padding: var(--border-radius-px);
 }
 
 nav ul {
     display: flex;
-    align-items: center;
+    align-items: top;
     list-style: none;
-    gap: 2em;
+    gap: var(--border-radius-px);
     font-weight: bold;
+    text-align: center;
 }
 
 nav li:first-child {
@@ -58,8 +61,58 @@ nav a:hover {
     
 }
 
-header, section {
-    margin: 2em auto;
+header, section{
+    margin-bottom: var(--border-radius-px);
     width: min(75em, 100%);
     background-color: var(--secondary-color);
+    padding: 0em;
+    border-radius: var(--border-radius-px);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--border-radius-px);
+}
+
+header img {
+    max-width: 50%;
+    
+    object-fit: scale-down;
+    object-position: Top;
+    padding: var(--border-radius-px);
+}
+
+.text-container {
+    /* flex: 1em 0em 1em 0; */
+    padding: var(--border-radius-px);
+    
+}
+
+
+/* .text-container p{
+    margin: 1em 0 1em 0;
+    font-size: 1.25rem;
+} */
+
+.projects-button {
+    display: inline-block;
+    text-justify: center;
+    text-decoration: none;
+    color: var(--base-color);
+    background-color: var(--extra-color);
+    padding: 0.5em;
+    border-radius: var(--border-radius-px);
+    font-size: max(1.75em, 2em);
+    font-weight: 600;
+}
+
+.secondary {
+    background-color: aquamarine;
+}
+
+section {
+    padding: 0em;
 }
